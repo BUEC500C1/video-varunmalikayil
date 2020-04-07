@@ -3,12 +3,15 @@ import os
 import textwrap
 from PIL import ImageFont, ImageDraw, Image
 import ffmpeg
+FILE_PATH = 'C:/Users/18607/Documents/BU/Classes/keys.py'
 
-consumer_key = 'CONSUMER_KEY'
-consumer_secret = 'CONSUMER_SECRET'
-access_token = 'ACCESS_TOKEN'
-access_secret = 'ACCESS_SECRET'
- 
+f = open(FILE_PATH, 'r')
+array = f.readlines()
+consumer_key = str(array[0].rstrip("\n"))
+consumer_secret = str(array[1].rstrip("\n"))
+access_token = str(array[2].rstrip("\n"))
+access_secret = str(array[3].rstrip("\n"))
+
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
 
