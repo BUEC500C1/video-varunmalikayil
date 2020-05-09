@@ -3,7 +3,7 @@ import os
 import textwrap
 from PIL import ImageFont, ImageDraw, Image
 import ffmpeg
-FILE_PATH = '/home/ubuntu/keys.py'
+FILE_PATH = 'C:/Users/18607/Documents/BU/Classes/keys.py'
 
 f = open(FILE_PATH, 'r')
 array = f.readlines()
@@ -47,6 +47,6 @@ for tweet in tweets:
     i += 1
 
 def downloadVid():
-    os.system("ffmpeg -framerate 1/3 -f image2 -i IMGP%3d.jpg test.avi")
+    os.system("ffmpeg -framerate 1/3 -f image2 -i IMGP%3d.jpg twitterTimelineSummary.avi")
 
 downloadVid()
